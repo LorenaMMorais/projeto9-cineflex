@@ -48,6 +48,7 @@ header p{
     color: #293845;
     z-index: 2;
 }
+/* Tela 1  */
 .container-filmes{
     position: absolute;
     top: 185px;
@@ -73,3 +74,52 @@ header p{
     width: 129px;
     height: 193px;
 }
+/* Fim Tela 1 */
+
+/* Tela 2 */
+.container-opcoes-dias{
+    position: absolute;
+    top: 185px;
+    padding: 0 19px 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 23px;
+}
+.dia{
+    gap: 22px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.02em;
+
+    color: #293845;
+}
+.container-horarios{
+    gap: 9px;
+    
+    display: flex;
+    flex-direction: inline;
+}
+.horario{
+    width: 83px;
+    height: 43px;
+    background: #E8833A;
+    border-radius: 3px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+/* Fim Tela 2 */
