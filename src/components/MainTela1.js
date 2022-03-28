@@ -10,7 +10,7 @@ export default function MainTela1(){
             const {data} = resposta;
             setFilmes(data);
     });
-        promessa.catch(error => console.log(error.resposta));
+    promessa.catch(error => console.log(error.resposta));
     }, []);
 
     return(

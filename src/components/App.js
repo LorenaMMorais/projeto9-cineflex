@@ -12,7 +12,7 @@ export default function App(){
                 <Route path="/" element={<TelaSelecaoFilme />} />
                 <Route path="/sessoes/:idFilme" element={<TelaSelecaoHorario />} />
                 <Route path="/assentos/:idSessao" element={<TelaSelecaoAssento />} />
-                <Route path="/sucesso/sucesso" element={<TelaSucesso />} />
+                <Route path="/sucesso" element={<TelaSucesso />} />
             </Routes>
       </BrowserRouter>
     );

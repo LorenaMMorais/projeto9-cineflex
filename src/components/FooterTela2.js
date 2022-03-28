@@ -1,10 +1,10 @@
-export default function FooterTela2(){
+export default function FooterTela2(props){
     return(
             <footer>
                 <div className="footer-filme">
-                    <img src="./assets/filme-2067.png" alt="filme 2067"/>
+                    <img src={props.posterFilme} alt={props.titulo}/>
                 </div>
-                <h1>2067</h1>
+                <h1>{props.titulo}</h1>
             </footer>
     );
 }
