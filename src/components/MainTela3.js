@@ -3,21 +3,44 @@ import axios from 'axios';
 import {Link} from 'react-router-dom'
 import { useParams } from 'react-router-dom';
 
-// import Assento from "./Assento";
 import DadosComprador from "./DadosComprador";
 import LegendaAssentos from "./LegendaAssentos";
 import FooterTela3 from "./FooterTela3";
 
+
+function RenderizaAssentos({assentos}){
+    return(
+        assentos.map((assento, identificador) => {
+            return(<RenderizaAssento numero={assento.name} disponivel={assento.isAvailable} key={identificador}/>);
+        })
+    );
+}
+
+function RenderizaAssento({numero, disponivel}){
+    const  [assento, setAssento] = useState({selecionado: false, list: []});
+     
+    function tipoAssento(numero){
+        if(!assento.selecionado){
+            setAssento({selecionado: true, list: [...assento.list, numero]});
+        }else{
+            setAssento({selecionado: false, list: assento.list.filter(item => item !== numero)});
+        }
+    }
+    return(
+        <div className={assento.selecionado ? 'assento selecionado' : disponivel ? 'assento disponivel' : 'assento indisponivel'} onClick={() => disponivel ? tipoAssento(numero) : alert(`O assento ${numero} não está disponível!`)}>{numero}</div>
+    );
+}
+
 export default function MainTela3(){
     const {idSessao} = useParams();
-    const [assentos, setAssentos] =  useState({day: {}, movie: {}, seats: []});
-    // const [infoReserva, setInfoReserva] = useState({dia: {}, filme: {}, assento: []});
+    
+    const [dadosFilme, setDadosFilme] =  useState({day: {}, movie: {}, seats: []});
     
     useEffect(() => {
         const promessa = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/showtimes/${idSessao}/seats`);
         promessa.then(resposta => {
             const {data} = resposta;
-            setAssentos(data);
+            setDadosFilme(data);
         })
         promessa.catch(error => console.log(error.resposta));
     }, [idSessao]);
@@ -26,18 +49,12 @@ export default function MainTela3(){
         <>
             <main>
                 <section className="container-assentos">
-                    {
-                        assentos.seats.map((assento, identificador) => {
-                            return(
-                                    <div key={assento.id} className="assento">{assento.name}</div>
-                            );
-                        })
-                    }
+                    <RenderizaAssentos assentos={dadosFilme.seats}/>
                 </section>
                 <LegendaAssentos />
                 <DadosComprador />
                 <button className="botao-reservar-assento"><Link to={`/sucesso`}>Reservar assento(s)</Link></button>
-                <FooterTela3 posterFilme={assentos.movie.posterURL} titulo={assentos.movie.title} sessao={assentos.day.weekday} horario={assentos.name} />
+                <FooterTela3 posterFilme={dadosFilme.movie.posterURL} titulo={dadosFilme.movie.title} sessao={dadosFilme.day.weekday} horario={dadosFilme.name} />
             </main>  
         </>
     );

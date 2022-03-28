@@ -244,15 +244,15 @@ button.horario{
     height: 25px;
     border-radius: 12px;
 }
-.assento-selecionado{
+.selecionado{
     background: #8DD7CF;
     border: 1px solid #1AAE9E;
 }
-.assento-disponivel{
+.disponivel{
     background: #C3CFD9;
     border: 1px solid #7B8B99;
 }
-.assento-indisponivel{
+.indisponivel{
     background: #FBE192;
     border: 1px solid #F7C52B;
 }
