@@ -1,3 +1,7 @@
+import {useState, useEffect} from 'react';
+import axios from 'axios';
+import { useParams } from 'react-router-dom';
+
 export default function DadosComprador(){
     return(
         <section className="dados-comprador">
