@@ -17,7 +17,7 @@ export default function MainTela1(){
         <main>
             <section className="container-filmes">
                 {
-                    filmes.map(filme =>{return <Link to={`/sessoes/${filme.id}`}><img className="filme" key={filme.id} src={filme.porterURL} alt={filme.title}/></Link>})
+                    filmes.map(filme =>{return <Link className="filme" to={`/sessoes/${filme.id}`}><img key={filme.id} src={filme.posterURL} alt={filme.title}/></Link>})
                 }
             </section>
         </main>
