@@ -4,7 +4,7 @@ export default function TelaSelecaoAssento(){
     return(
         <>
             <Header />
-            <section className="selecao">Selecione o(s) assento(s)</section>
+            <section className="titulo-page">Selecione o(s) assento(s)</section>
             <main>
                 <section className="container-assentos">
                     <div className="assento">01</div>

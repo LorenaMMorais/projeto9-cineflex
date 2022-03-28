@@ -4,7 +4,7 @@ export default function TelaSelecaoFilme(){
     return(
         <>
         <Header />
-        <section className="selecao">Selecione o filme</section>
+        <section className="titulo-page">Selecione o filme</section>
         <section className="container-filmes">
             <div className="filme">
                 <img src="./assets/filme-2067.png" alt="filme 2067"/>

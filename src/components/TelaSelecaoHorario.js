@@ -4,7 +4,7 @@ export default function TelaSelecaoHorario(){
     return (
         <>
             <Header />
-            <section className="selecao">Selecione o Horário</section>
+            <section className="titulo-page">Selecione o Horário</section>
             <main className="container-opcoes-dias">
                     <div className="dia">
                         Quinta-feria - 24/06/2021
