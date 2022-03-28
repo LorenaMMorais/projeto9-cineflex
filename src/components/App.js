@@ -1,14 +1,14 @@
 // import TelaSelecaoFilme from "./TelaSelecaoFilme";
 // import TelaSelecaoHorario from "./TelaSelecaoHorario";
-// import TelaSelecaoAssento from "./TelaSelecaoAssento";
-import TelaSucesso from "./TelaSucesso";
+import TelaSelecaoAssento from "./TelaSelecaoAssento";
+// import TelaSucesso from "./TelaSucesso";
 export default function App(){
     return(
         <>
-            {/*<TelaSelecaoFilme /> */}
+            {/* <TelaSelecaoFilme /> */}
             {/* <TelaSelecaoHorario /> */}
-            {/* <TelaSelecaoAssento /> */}
-            <TelaSucesso />
+            <TelaSelecaoAssento />
+            {/* <TelaSucesso /> */}
         </>
     );
 }

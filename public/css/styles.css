@@ -58,7 +58,6 @@ main{
 
 }
 footer{
-    
     position: fixed;
     width: 375px;
     height: 117px;
@@ -71,6 +70,11 @@ footer{
 
     background: #DFE6ED;
     border: 1px solid #9EADBA;
+
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;    
+    color: #293845;
 }
 .footer-filme{
     width: 64px;
@@ -227,7 +231,7 @@ button.horario{
     color: #000000;
 }
 .container-legendas-assentos{
-    gap: 20px;
+    gap: 30px;
     padding: 0 40px 0;
     display: flex;
 }
@@ -240,14 +244,7 @@ button.horario{
 .assento-selecionado, .assento-disponivel, .assento-indisponivel{
     width: 25px;
     height: 25px;
-
     border-radius: 12px;
-
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 15px;
-    letter-spacing: -0.013em;
-    color: #4E5A65;
 }
 .assento-selecionado{
     background: #8DD7CF;
@@ -260,6 +257,13 @@ button.horario{
 .assento-indisponivel{
     background: #FBE192;
     border: 1px solid #F7C52B;
+}
+.legenda{
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: -0.013em;
+    color: #4E5A65;
 }
 .dados-comprador{
     display: flex;
